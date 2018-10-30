@@ -1,0 +1,10 @@
+[Unit]
+Description=Simple Temperature API
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c "/root/nanopi-bme-280-service/src/app.py"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
